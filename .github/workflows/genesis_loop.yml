@@ -1,0 +1,21 @@
+name: Genesis Autonomous Loop
+on:
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Genesis Core Pulse
+        run: |
+          echo "Pulse at $(date)" >> GENESIS_CORE.md
+          git config --global user.name "Genesis-CEO-Bot"
+          git config --global user.email "bot@genesis-corp.ai"
+          git add .
+          git commit -m "Genesis Auto-Update: Heartbeat" || exit 0
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GENESIS_TOKEN }}
