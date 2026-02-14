@@ -14,3 +14,8 @@ body {
 * {
   -webkit-tap-highlight-color: transparent;
 }
+
+.shield-mask {
+  mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+}

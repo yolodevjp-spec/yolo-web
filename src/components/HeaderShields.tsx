@@ -22,7 +22,7 @@ export default function HeaderShields({
         alt="Shields Header"
         width={400}
         height={60}
-        className="object-contain w-full max-w-2xl h-auto"
+        className="mx-auto w-full max-w-4xl shield-mask object-contain h-auto"
         priority
       />
     </header>
