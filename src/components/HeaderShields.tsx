@@ -16,10 +16,15 @@ export default function HeaderShields({
   currentVibe = "祭",
 }: HeaderShieldsProps) {
   return (
-    <header className="sticky top-0 z-50 flex justify-center items-center gap-4 px-4 py-3 bg-black border-b border-gray-800">
-      <Image src="/pins/new.png" alt="New" width={40} height={40} className="object-contain" priority />
-      <Image src="/pins/over100k.png" alt="Over 100K" width={40} height={40} className="object-contain" priority />
-      <Image src="/pins/vibe.png" alt="Vibe" width={40} height={40} className="object-contain" priority />
+    <header className="sticky top-0 z-50 flex justify-center items-center bg-black border-b border-gray-800">
+      <Image
+        src="/images/shields-header.png"
+        alt="Shields Header"
+        width={400}
+        height={60}
+        className="object-contain w-full max-w-2xl h-auto"
+        priority
+      />
     </header>
   );
 }
