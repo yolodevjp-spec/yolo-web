@@ -32,3 +32,11 @@ body {
   -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
   display: block;
 }
+
+/* 画像下部の境界線を完全に霧散させる */
+.shield-blend-final {
+  mask-image: linear-gradient(to bottom, black 70%, transparent 100%) !important;
+  -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%) !important;
+  display: block !important;
+  margin-bottom: -1px !important; /* 隙間を物理的に潰す */
+}
