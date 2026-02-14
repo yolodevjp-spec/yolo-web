@@ -1,0 +1,12 @@
+{
+  "trend": [
+    { "id": "t1", "title": "2026年最新AIトレンド", "excerpt": "AIがビジネスをどう変えるか...", "date": "2026-02-13", "author": "YOLO AI Team" },
+    { "id": "t2", "title": "Vertical SaaSの夜明け", "excerpt": "特化型SaaSが市場を独占する理由", "date": "2026-02-12", "author": "SaaS Hunter" }
+  ],
+  "ai": [
+    { "id": "a1", "title": "Gemini 3 Flashの衝撃", "excerpt": "爆速レスポンスで開発が加速する", "date": "2026-02-13", "author": "Tech Lab" }
+  ],
+  "productivity": [
+    { "id": "p1", "title": "Cursorを極める10の技", "excerpt": "エンジニアの生産性を最大化する", "date": "2026-02-11", "author": "Editor Pro" }
+  ]
+}
