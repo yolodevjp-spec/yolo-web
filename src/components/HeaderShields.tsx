@@ -17,13 +17,13 @@ export default function HeaderShields({
 }: HeaderShieldsProps) {
   return (
     <header className="sticky top-0 z-50 bg-black">
-      <div className="relative w-full bg-black">
+      <div className="relative w-full bg-black py-12">
         <Image
           src="/images/shields-header.png"
           alt="Shields Header"
           width={400}
           height={60}
-          className="mx-auto w-full max-w-5xl shield-blend-final"
+          className="mx-auto w-full max-w-2xl shield-blend-final"
           priority
         />
       </div>
