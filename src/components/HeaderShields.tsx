@@ -16,17 +16,15 @@ export default function HeaderShields({
   currentVibe = "祭",
 }: HeaderShieldsProps) {
   return (
-    <header className="sticky top-0 z-50 flex justify-center items-center bg-black border-b border-gray-800 pb-0">
-      <div className="pb-0">
-        <Image
-          src="/images/shields-header.png"
-          alt="Shields Header"
-          width={400}
-          height={60}
-          className="mx-auto w-full max-w-4xl shield-mask shield-fusion object-contain h-auto"
-          priority
-        />
-      </div>
+    <header className="sticky top-0 z-50 flex justify-center items-center bg-black border-b border-gray-800 p-0 m-0">
+      <Image
+        src="/images/shields-header.png"
+        alt="Shields Header"
+        width={400}
+        height={60}
+        className="mx-auto w-full max-w-5xl shield-blend"
+        priority
+      />
     </header>
   );
 }

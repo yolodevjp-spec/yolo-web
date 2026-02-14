@@ -25,3 +25,10 @@ body {
   mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
   -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
 }
+
+.shield-blend {
+  /* 下部 20% を滑らかに透明化して背景に溶け込ませる */
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  display: block;
+}
