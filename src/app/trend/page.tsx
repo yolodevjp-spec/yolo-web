@@ -1,17 +1,26 @@
-import React from 'react';
-import HeaderShields from '@/components/HeaderShields';
-import ContentCard from '@/components/ContentCard';
+import type { Metadata } from "next";
+import HeaderShields from "@/components/HeaderShields";
+import ArticleGrid from "@/components/ArticleGrid";
+import articlesData from "@/data/articles.json";
 
-export default function CategoryPage() {
+const MAIN_CATEGORIES = ["ai", "sales", "marketing", "productivity"];
+
+export const metadata: Metadata = {
+  title: "Trend | Vertical SaaS Hunter",
+  description: "AI、Sales、Marketing、Productivityのトレンド記事をまとめて閲覧。",
+  openGraph: { title: "Trend | Vertical SaaS Hunter", description: "トレンド記事一覧。" },
+};
+
+export default function TrendPage() {
+  const articles = MAIN_CATEGORIES.flatMap(
+    (cat) => (articlesData as Record<string, typeof articlesData.ai>)[cat] || []
+  );
+
   return (
-    <div className="min-h-screen bg-black text-white">
-      <HeaderShields newCount={68} grudenCount="10万" goldenHitCount={14} currentVibe="祭" />
+    <div className="min-h-screen bg-black text-white flex-1">
+      <HeaderShields />
       <main className="max-w-7xl mx-auto px-4 py-10">
-        <h1 className="text-4xl font-black mb-10 border-l-8 border-red-600 pl-4 uppercase">Category Feed</h1>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <ContentCard thumbnailUrl="/images/video1.jpg" title="COMING SOON: NEXT GEN VIBE" link="#" />
-          <ContentCard thumbnailUrl="/images/ad_device.jpg" title="【PR】PREMIUM ACCESS" link="#" isAd={true} />
-        </div>
+        <ArticleGrid articles={articles} title="Trend Feed" />
       </main>
     </div>
   );

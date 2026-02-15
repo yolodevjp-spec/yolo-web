@@ -1,16 +1,27 @@
-import React from 'react';
-import HeaderShields from '@/components/HeaderShields';
-import ContentCard from '@/components/ContentCard';
+import type { Metadata } from "next";
+import Link from "next/link";
+import HeaderShields from "@/components/HeaderShields";
 
-export default function CategoryPage() {
+export const metadata: Metadata = {
+  title: "Design | Vertical SaaS Hunter",
+  description: "デザイン・UXの記事。Coming soon。",
+  openGraph: { title: "Design | Vertical SaaS Hunter", description: "デザイン・UXの記事。" },
+};
+
+export default function DesignPage() {
   return (
-    <div className="min-h-screen bg-black text-white">
-      <HeaderShields newCount={68} grudenCount="10万" goldenHitCount={14} currentVibe="祭" />
+    <div className="min-h-screen bg-black text-white flex-1">
+      <HeaderShields />
       <main className="max-w-7xl mx-auto px-4 py-10">
-        <h1 className="text-4xl font-black mb-10 border-l-8 border-red-600 pl-4 uppercase">Category Feed</h1>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <ContentCard thumbnailUrl="/images/video1.jpg" title="COMING SOON: NEXT GEN VIBE" link="#" />
-          <ContentCard thumbnailUrl="/images/ad_device.jpg" title="【PR】PREMIUM ACCESS" link="#" isAd={true} />
+        <h1 className="text-4xl font-black mb-10 border-l-8 border-red-600 pl-4 uppercase">Design Feed</h1>
+        <div className="text-gray-400 text-center py-16">
+          <p className="mb-6">Coming soon. Explore other categories:</p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link href="/ai" className="text-red-600 hover:text-red-500 font-bold">AI</Link>
+            <Link href="/sales" className="text-red-600 hover:text-red-500 font-bold">Sales</Link>
+            <Link href="/marketing" className="text-red-600 hover:text-red-500 font-bold">Marketing</Link>
+            <Link href="/productivity" className="text-red-600 hover:text-red-500 font-bold">Productivity</Link>
+          </div>
         </div>
       </main>
     </div>
