@@ -28,9 +28,9 @@ export default function CategoryTabs() {
               <Link
                 key={href}
                 href={href}
-                className={`px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap transition-all duration-200 border-b-2 ${
+                className={`px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap transition-all duration-200 border-b-4 ${
                   isActive
-                    ? "text-black bg-white border-black"
+                    ? "text-black bg-white border-black font-bold"
                     : "text-gray-400 border-transparent hover:text-white hover:bg-gray-800"
                 }`}
               >
