@@ -67,16 +67,19 @@ export default function HeaderShields() {
             />
             <div className="absolute inset-0 grid grid-cols-3 items-center justify-items-center pointer-events-none">
               <div className="flex flex-col items-center justify-center">
-                <span className="text-[9px] md:text-[10px] font-black tracking-widest text-red-500 drop-shadow-[0_0_10px_rgba(251,191,36,0.8)]">新着</span>
-                <span className="text-lg md:text-xl font-black tabular-nums text-red-500 drop-shadow-[0_0_12px_rgba(251,191,36,0.9)]">{stats.new24h}</span>
+                <span className="text-base md:text-lg font-black tracking-wide text-red-500 drop-shadow-[0_0_12px_rgba(251,191,36,0.9)]" data-shield="new24h">
+                  新着 {stats.new24h}
+                </span>
               </div>
               <div className="flex flex-col items-center justify-center">
-                <span className="text-[9px] md:text-[10px] font-black tracking-widest text-amber-400 drop-shadow-[0_0_8px_rgba(251,191,36,0.7)]">10万越え</span>
-                <span className="text-lg md:text-xl font-black tabular-nums text-amber-400 drop-shadow-[0_0_10px_rgba(251,191,36,0.7)]">{stats.over100k}</span>
+                <span className="text-base md:text-lg font-black tracking-wide text-amber-400 drop-shadow-[0_0_10px_rgba(251,191,36,0.7)]">
+                  10万越え {stats.over100k}
+                </span>
               </div>
               <div className="flex flex-col items-center justify-center">
-                <span className="text-[9px] md:text-[10px] font-black tracking-widest text-gray-300 drop-shadow-[0_0_6px_rgba(192,192,192,0.6)]">空気感</span>
-                <span className="text-xl md:text-2xl font-black text-gray-300 drop-shadow-[0_0_8px_rgba(192,192,192,0.6)]">{stats.atmosphere}</span>
+                <span className="text-base md:text-lg font-black tracking-wide text-gray-300 drop-shadow-[0_0_8px_rgba(192,192,192,0.6)]">
+                  空気感 {stats.atmosphere}
+                </span>
               </div>
             </div>
           </div>
