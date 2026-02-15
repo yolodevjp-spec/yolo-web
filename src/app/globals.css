@@ -3,6 +3,7 @@
 :root {
   --background: #000000;
   --foreground: #ffffff;
+  --shield-header-height: 72px;
 }
 
 body {

@@ -19,18 +19,18 @@ export default function CategoryTabs() {
   const pathname = usePathname();
 
   return (
-    <div className="sticky top-0 z-40 bg-black/98 border-b border-gray-800">
-      <div className="max-w-7xl mx-auto px-2 overflow-x-auto scrollbar-hide">
-        <div className="flex gap-1 py-2 min-w-max">
+    <div className="sticky top-0 z-40 bg-black border-b border-gray-800 min-h-[48px] flex items-stretch">
+      <div className="max-w-7xl mx-auto w-full px-2 overflow-x-auto overflow-y-hidden scrollbar-hide flex">
+        <div className="flex gap-0 py-2 min-w-max items-center">
           {TABS.map(({ href, label }) => {
             const isActive = pathname === href || pathname.startsWith(href + "/");
             return (
               <Link
                 key={href}
                 href={href}
-                className={`px-3 py-2 rounded-md text-sm font-medium whitespace-nowrap transition-all duration-200 border-b-4 ${
+                className={`px-4 py-2 rounded-t-md text-sm font-bold whitespace-nowrap transition-colors duration-200 border-b-4 -mb-px ${
                   isActive
-                    ? "text-black bg-white border-black font-bold"
+                    ? "text-black bg-white border-black"
                     : "text-gray-400 border-transparent hover:text-white hover:bg-gray-800"
                 }`}
               >
