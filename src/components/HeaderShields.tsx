@@ -61,19 +61,19 @@ export default function HeaderShields() {
         >
           <div className="grid grid-cols-3 gap-1 w-full px-2">
             <div
-              className="rounded-lg border border-red-500/50 bg-red-950/80 flex flex-col items-center justify-center py-2 min-h-[52px]"
+              className="rounded-lg border border-red-500/50 bg-red-950 flex flex-col items-center justify-center py-2 min-h-[52px]"
               data-shield="new24h"
             >
               <span className="text-base md:text-lg font-black text-red-400 drop-shadow-[0_0_12px_rgba(251,191,36,0.9)]">
                 新着 {stats.new24h}
               </span>
             </div>
-            <div className="rounded-lg border border-amber-500/50 bg-amber-950/80 flex flex-col items-center justify-center py-2 min-h-[52px]">
+            <div className="rounded-lg border border-amber-500/50 bg-amber-950 flex flex-col items-center justify-center py-2 min-h-[52px]">
               <span className="text-base md:text-lg font-black text-amber-400 drop-shadow-[0_0_10px_rgba(251,191,36,0.7)]">
                 10万越え {stats.over100k}
               </span>
             </div>
-            <div className="rounded-lg border border-gray-500/50 bg-gray-800/80 flex flex-col items-center justify-center py-2 min-h-[52px]">
+            <div className="rounded-lg border border-gray-500/50 bg-gray-800 flex flex-col items-center justify-center py-2 min-h-[52px]">
               <span className="text-base md:text-lg font-black text-gray-300 drop-shadow-[0_0_8px_rgba(192,192,192,0.6)]">
                 空気感 {stats.atmosphere}
               </span>
