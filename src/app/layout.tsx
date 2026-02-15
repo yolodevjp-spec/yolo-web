@@ -2,6 +2,8 @@ import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import HeaderShields from "@/components/HeaderShields";
+import CategoryTabs from "@/components/CategoryTabs";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
@@ -19,6 +21,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="ja">
       <body className="bg-black antialiased text-white min-h-screen flex flex-col">
         <Navbar />
+        <HeaderShields />
+        <CategoryTabs />
         {children}
         <Footer />
       </body>

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import HeaderShields from "@/components/HeaderShields";
 import ArticleGrid from "@/components/ArticleGrid";
 import articlesData from "@/data/articles.json";
 
@@ -14,7 +13,6 @@ export default function SalesPage() {
 
   return (
     <div className="min-h-screen bg-black text-white flex-1">
-      <HeaderShields />
       <main className="max-w-7xl mx-auto px-4 py-10">
         <ArticleGrid articles={articles} title="Sales Feed" />
       </main>

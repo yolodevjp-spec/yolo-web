@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import HeaderShields from "@/components/HeaderShields";
 
 export const metadata: Metadata = {
   title: "Design | Vertical SaaS Hunter",
@@ -11,7 +10,6 @@ export const metadata: Metadata = {
 export default function DesignPage() {
   return (
     <div className="min-h-screen bg-black text-white flex-1">
-      <HeaderShields />
       <main className="max-w-7xl mx-auto px-4 py-10">
         <h1 className="text-4xl font-black mb-10 border-l-8 border-red-600 pl-4 uppercase">Design Feed</h1>
         <div className="text-gray-400 text-center py-16">
