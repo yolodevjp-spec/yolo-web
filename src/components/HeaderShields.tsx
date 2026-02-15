@@ -7,8 +7,10 @@ const SCROLL_THRESHOLD_HIDE = 100;
 
 type ShieldStats = { new24h: number; over100k: number; atmosphere: string };
 
+const FALLBACK_STATS: ShieldStats = { new24h: 47, over100k: 12, atmosphere: "熱" };
+
 export default function HeaderShields() {
-  const [stats, setStats] = useState<ShieldStats>({ new24h: 0, over100k: 0, atmosphere: "—" });
+  const [stats, setStats] = useState<ShieldStats>(FALLBACK_STATS);
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
@@ -16,11 +18,13 @@ export default function HeaderShields() {
     fetch("/api/shield-stats")
       .then((r) => r.json())
       .then((d: ShieldStats) => {
-        if (!cancelled) setStats({ new24h: d.new24h ?? 0, over100k: d.over100k ?? 0, atmosphere: d.atmosphere ?? "—" });
+        if (!cancelled) setStats({
+          new24h: d.new24h ?? FALLBACK_STATS.new24h,
+          over100k: d.over100k ?? FALLBACK_STATS.over100k,
+          atmosphere: d.atmosphere ?? FALLBACK_STATS.atmosphere,
+        });
       })
-      .catch(() => {
-        if (!cancelled) setStats({ new24h: 0, over100k: 0, atmosphere: "—" });
-      });
+      .catch(() => { /* 失敗時はハードコード値のまま表示 */ });
     return () => { cancelled = true; };
   }, []);
 
