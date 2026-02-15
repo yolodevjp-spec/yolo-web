@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
 
 const SCROLL_THRESHOLD_START = 20;
 const SCROLL_THRESHOLD_HIDE = 100;
@@ -53,34 +52,27 @@ export default function HeaderShields() {
         }}
       >
         <div
-          className="relative w-full bg-black py-2 transition-transform duration-300 ease-out origin-top"
+          className="relative w-full max-w-xl mx-auto py-2 transition-transform duration-300 ease-out origin-top"
           style={{ transform: `scale(${scale})`, opacity }}
         >
-          <div className="relative mx-auto w-full max-w-xl">
-            <Image
-              src="/images/shields-header.png"
-              alt=""
-              width={400}
-              height={60}
-              className="w-full shield-blend-final"
-              priority
-            />
-            <div className="absolute inset-0 grid grid-cols-3 items-center justify-items-center pointer-events-none">
-              <div className="flex flex-col items-center justify-center">
-                <span className="text-base md:text-lg font-black tracking-wide text-red-500 drop-shadow-[0_0_12px_rgba(251,191,36,0.9)]" data-shield="new24h">
-                  新着 {stats.new24h}
-                </span>
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <span className="text-base md:text-lg font-black tracking-wide text-amber-400 drop-shadow-[0_0_10px_rgba(251,191,36,0.7)]">
-                  10万越え {stats.over100k}
-                </span>
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <span className="text-base md:text-lg font-black tracking-wide text-gray-300 drop-shadow-[0_0_8px_rgba(192,192,192,0.6)]">
-                  空気感 {stats.atmosphere}
-                </span>
-              </div>
+          <div className="grid grid-cols-3 gap-1 w-full px-2">
+            <div
+              className="rounded-lg border border-red-500/50 bg-red-950/80 flex flex-col items-center justify-center py-2 min-h-[52px]"
+              data-shield="new24h"
+            >
+              <span className="text-base md:text-lg font-black text-red-400 drop-shadow-[0_0_12px_rgba(251,191,36,0.9)]">
+                新着 {stats.new24h}
+              </span>
+            </div>
+            <div className="rounded-lg border border-amber-500/50 bg-amber-950/80 flex flex-col items-center justify-center py-2 min-h-[52px]">
+              <span className="text-base md:text-lg font-black text-amber-400 drop-shadow-[0_0_10px_rgba(251,191,36,0.7)]">
+                10万越え {stats.over100k}
+              </span>
+            </div>
+            <div className="rounded-lg border border-gray-500/50 bg-gray-800/80 flex flex-col items-center justify-center py-2 min-h-[52px]">
+              <span className="text-base md:text-lg font-black text-gray-300 drop-shadow-[0_0_8px_rgba(192,192,192,0.6)]">
+                空気感 {stats.atmosphere}
+              </span>
             </div>
           </div>
         </div>
