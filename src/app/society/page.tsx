@@ -3,16 +3,16 @@ import ArticleGrid from "@/components/ArticleGrid";
 import { getArticlesByCategory } from "@/lib/articles";
 
 export const metadata: Metadata = {
-  title: "トレンド | YOLO-WEB",
-  description: "トレンド記事一覧",
+  title: "社会 | YOLO-WEB",
+  description: "社会記事一覧",
 };
 
-export default function TrendPage() {
-  const articles = getArticlesByCategory("trend");
+export default function SocietyPage() {
+  const articles = getArticlesByCategory("society");
   return (
     <div className="min-h-screen bg-black text-white flex-1">
       <main className="max-w-7xl mx-auto px-4 py-10">
-        <ArticleGrid articles={articles} title="トレンド" />
+        <ArticleGrid articles={articles} title="社会" />
       </main>
     </div>
   );
